@@ -1,0 +1,22 @@
+version: 0.0
+os: linux 
+files:
+  - source: bin/example-webapp-linux
+    destination: /home/ec2-user/go/bin/
+  - source: public/index.html
+    destination: /home/ec2-user/go/public/
+  - source: public/style.css
+    destination: /home/ec2-user/go/public/
+  - source: public/script.js
+    destination: /home/ec2-user/go/public/
+  - source: bin/appstart.sh
+    destination: /home/ec2-user/go/bin/
+
+permissions:
+  - object: /home/ec2-user/go/bin
+    mode: 4755
+hooks:
+  AfterInstall:
+    - location: bin/appstart.sh
+      timeout: 30
+      runas: root
