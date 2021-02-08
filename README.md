@@ -16,9 +16,11 @@ The AppSpec.yml under "Bin" folder has the instructions for AWS Code Deploy.
       Execute the binary "./example-webapp-linux"
       This will start a webapp listening on port 3000
       
-   Automatic
-      Make a pull request to the main branch (The Webapp is deployed as a zipped artifact, ApptioWebApp.zip is an example)
-      This will trigger AWS CodePipeline and AWS CodeDeploy services on the linked AWS account
-      CodeDeploy agent installed on EC2 machine will use the appspec.yml instructions to deploy the webapp
+            
+    Automatic
+       Make a pull request to the main branch (The Webapp is deployed as a zipped artifact, ApptioWebApp.zip is an example)
+       This will trigger AWS CodePipeline and AWS CodeDeploy services on the linked AWS account
+       CodeDeploy agent installed on EC2 machine will use the appspec.yml instructions to deploy the webapp
+   
       
 
